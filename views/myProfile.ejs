@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/profile.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/common.css" type="text/css">
+    <script src="/javascripts/common/checkAuthorization.js"></script>
+</head>
+<body>
+<%- include("partial/header.ejs")%>
+
+<div id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mx-4 my-4 text-center">
+                <img class="rounded mt-5" src="" alt="avatar" id="avatar" width="300" height="300">
+                <button class="btn btn-success mt-3 btn-lg w-75" type="button" id="editButton">Edit profile</button>
+                <button id="exit" class="btn btn-danger mt-3 btn-lg w-75">Log out</button>
+            </div>
+            <div class="col mx-4 my-4">
+                <div id="name" class="text-center my-2"></div>
+
+                <div class="row my-3" id="nickname">
+                    <dt class="col-4">Nickname:</dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="age">
+                    <dt class="col-4">Age:</dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="country">
+                    <dt class="col-4">Country:</dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="city">
+                    <dt class="col-4">City:</dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="someInfo">
+                    <dt class="col-4">Some information:</dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="partnerDescription">
+                    <dt class="col-4"></dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="instagram">
+                    <dt class="col-4"></dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="telegram">
+                    <dt class="col-4"></dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="facebook">
+                    <dt class="col-4"></dt>
+                    <dd class="col-8"></dd>
+                </div>
+
+                <div class="row my-3" id="twitter">
+                    <dt class="col-4"></dt>
+                    <dd class="col-8"></dd>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/javascripts/common/header.js"></script>
+<script src="/javascripts/myProfile.js"></script>
+</body>
+</html>

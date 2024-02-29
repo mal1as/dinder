@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/editProfile.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/common.css" type="text/css">
+    <script src="/javascripts/common/checkAuthorization.js"></script>
+</head>
+<body>
+<%- include("partial/header.ejs")%>
+
+<div id="main-content">
+    <h1>Edit your profile</h1>
+
+    <form id="avatarForm" class="py-3 px-5" method="post" enctype="multipart/form-data">
+        <div class="custom-file mb-2">
+            <input type="file" class="custom-file-input" id="avatar">
+            <label class="custom-file-label" for="avatar">Choose avatar (only .png and .jpg, 10MB limit)</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" name="submit">Upload file</button>
+    </form>
+
+    <form class="py-1 px-5 was-validated" id="editForm">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="First name" minlength="2" maxlength="20"
+                   required>
+            <div class="invalid-feedback">Enter correct name</div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last name" minlength="2" maxlength="20"
+                   required>
+            <div class="invalid-feedback">Enter correct last name</div>
+        </div>
+
+        <div class="form-group">
+            <label for="sex">Sex</label>
+            <select class="form-control" id="sex" required>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" placeholder="Country" minlength="2" maxlength="20"
+                   required>
+            <div class="invalid-feedback">Enter correct country</div>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City" minlength="2" maxlength="20" required>
+            <div class="invalid-feedback">Enter correct city</div>
+        </div>
+
+        <div class="form-group">
+            <label for="someInfo">Some information</label>
+            <textarea class="form-control" id="someInfo" placeholder="Some information" minlength="20" maxlength="255"
+                      required>
+            </textarea>
+            <div class="invalid-feedback">Enter from 20 to 255 letters</div>
+        </div>
+
+        <div class="form-group">
+            <label for="neededSex">Who are you looking for?</label>
+            <select class="form-control" id="neededSex">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="partnerDescription">Describe ideal partner for you</label>
+            <textarea class="form-control" id="partnerDescription" placeholder="Describe ideal partner for you"
+                      minlength="20" maxlength="255">
+            </textarea>
+            <div class="invalid-feedback">Enter from 20 to 255 letters</div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="instagram">Instagram</label>
+            <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+        </div>
+
+        <div class="form-group">
+            <label for="telegram">Telegram</label>
+            <input type="text" class="form-control" id="telegram" placeholder="Telegram">
+        </div>
+
+        <div class="form-group">
+            <label for="facebook">Facebook</label>
+            <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+        </div>
+
+        <div class="form-group">
+            <label for="twitter">Twitter</label>
+            <input type="text" class="form-control" id="twitter" placeholder="Twitter">
+        </div>
+
+        <button type="button" class="btn btn-primary" name="submit">Save changes</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/javascripts/common/header.js"></script>
+<script src="/javascripts/editProfile.js"></script>
+</body>
+</html>

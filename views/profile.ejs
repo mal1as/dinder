@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= user.firstName + " " + user.lastName %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/common.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/profile.css" type="text/css">
+</head>
+<body>
+<%- include("partial/header.ejs") %>
+
+<div id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mx-4 my-4 text-center">
+                <img class="rounded mt-5" src="<%= user.avatar %>" alt="avatar" id="avatar"
+                     width="300" height="300">
+            </div>
+            <div class="col mx-4 my-4">
+                <div id="name" class="text-center my-2"><%= user.firstName + " " + user.lastName %></div>
+
+                <div class="row my-3" id="nickname">
+                    <dt class="col-4">Nickname:</dt>
+                    <dd class="col-8"><%= user.nickname %></dd>
+                </div>
+
+                <div class="row my-3" id="age">
+                    <dt class="col-4">Age:</dt>
+                    <dd class="col-8"><%= user.age %></dd>
+                </div>
+
+                <div class="row my-3" id="country">
+                    <dt class="col-4">Country:</dt>
+                    <dd class="col-8"><%= user.country %></dd>
+                </div>
+
+                <div class="row my-3" id="city">
+                    <dt class="col-4">City:</dt>
+                    <dd class="col-8"><%= user.city %></dd>
+                </div>
+
+                <div class="row my-3" id="someInfo">
+                    <dt class="col-4">Some information:</dt>
+                    <dd class="col-8"><%= user.someInfo %></dd>
+                </div>
+
+                <% if(user.partnerDescription) { %>
+                    <div class="row my-3" id="partnerDescription">
+                        <dt class="col-4">Ideal partner description:</dt>
+                        <dd class="col-8"><%= user.partnerDescription %></dd>
+                    </div>
+                <% } %>
+
+                <% if(user.instagram) { %>
+                    <div class="row my-3" id="instagram">
+                        <dt class="col-4">Instagram:</dt>
+                        <dd class="col-8"><%= user.instagram %></dd>
+                    </div>
+                <% } %>
+
+                <% if(user.telegram) { %>
+                    <div class="row my-3" id="telegram">
+                        <dt class="col-4">Telegram:</dt>
+                        <dd class="col-8"><%= user.telegram %></dd>
+                    </div>
+                <% } %>
+
+                <% if(user.facebook) { %>
+                    <div class="row my-3" id="facebook">
+                        <dt class="col-4">Facebook:</dt>
+                        <dd class="col-8"><%= user.facebook %></dd>
+                    </div>
+                <% } %>
+
+                <% if(user.twitter) { %>
+                    <div class="row my-3" id="twitter">
+                        <dt class="col-4">Twitter:</dt>
+                        <dd class="col-8"><%= user.twitter %></dd>
+                    </div>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/javascripts/common/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/common.css" type="text/css">
+</head>
+<body>
+
+<%- include("partial/header.ejs")%>
+
+<div id="main-content">
+    <h1>Authorization</h1>
+
+    <form class="py-1 px-5 was-validated" id="authorization-form">
+
+        <div class="form-group">
+            <label for="nickname">Nickname</label>
+            <input type="text" class="form-control" id="nickname" placeholder="Nickname">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            <div class="invalid-feedback">Nickname or password incorrect</div>
+        </div>
+
+        <button class="btn btn-primary btn-lg mb-4" id="submit-button" type="submit">Sign in</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/javascripts/common/header.js"></script>
+<script src="/javascripts/auth.js"></script>
+</body>
+</html>
